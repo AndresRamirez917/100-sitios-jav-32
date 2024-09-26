@@ -122,7 +122,7 @@ form button {
   padding: 80px 0;
 }
 
-#features .features-row {
+#features .features-row, .features-row2 {
   display: flex;
 }
 
@@ -133,6 +133,8 @@ form button {
 
 #features .features-row .text {
   padding: 10px 20px 20px 20px;
+  text-align: justify;
+  width: 100%;
 }
 
 #features .features-row .text p {
@@ -141,8 +143,30 @@ form button {
 
 #features .features-row img {
   width: 100%;
-  height: 300px;
+  height: 40vh;
 }
+
+#features .features-row2 .image {
+  width: 100%;
+ 
+}
+
+#features .features-row2 .text {
+  padding: 10px 20px 20px 20px;
+  text-align: justify;
+  width: 100%;
+}
+
+#features .features-row2 .text p {
+  padding: 10px 0;
+}
+
+#features .features-row2 img {
+  width: 100%;
+  height: 40vh;
+}
+
+
 
 #features .display-2 {
   text-align: center;
