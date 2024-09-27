@@ -64,5 +64,67 @@ async function getData2(){
  
 }
 
+const btn_validar = document.getElementById('btn-validar');
+const validar = (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const mensaje = document.getElementById('mensaje');
+    const arr = [];
+    const messageArr = ["Nombre", "Email", "Mensaje"];
+    arr.push(nombre, email, mensaje);
+    for(i = 0; i < arr.length; i++){
+        if(arr[i].value == ""){
+            swal({
+                title: `El campo ${messageArr[i]} no puede estar vacío`,
+                icon: "error",
+                 })
+                 return false;
+        }
+    }
+    if(!emailValido(email.value)){
+        
+ swal({
+    title: `El campo ${messageArr[1]} no tiene el formato correcto`,
+    icon: "error",
+     })
+     return false;
+    }
+    
+ swal({
+    title: `Datos enviados satisfactoriamente`,
+    icon: "success",
+     })
+     nombre.value = "";
+     email.value = "";
+     mensaje.value = "";
+    return true;
+}
+
+const emailValido = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+// const box = document.querySelector('.box');
+// function backg(){
+//     for(i = 0; i < 5; i++){
+//         const boxx = document.createRange().createContextualFragment(`
+            
+//             <div class="box box-1">
+//             <h2>Ready to start</h2>
+//             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, cum!</p>
+//             <hr>
+//             </div>
+            
+//             `)
+//             box.style.backgroundImage = "url(img/features-1-web-dev.jpg)"
+//         const webdev_row = document.querySelector('.webdev-row');
+//         webdev_row.append(boxx);
+//     }
+// }
+
+
+
 getData2()
 getData()
+btn_validar.addEventListener("click", validar);

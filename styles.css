@@ -88,6 +88,13 @@ form button {
   color: #ea2bb2;
 }
 
+::placeholder {
+  font-family: "Font Awesome 5 free";
+  font-weight: 500;
+  content: "\f007";
+  text-align: right;
+}
+
 /* mainheader */
 #mainheader {
   color: #fff;
@@ -127,7 +134,7 @@ form button {
 }
 
 #features .features-row .image {
-  width: 100%;
+  width: 120%;
  
 }
 
@@ -146,8 +153,12 @@ form button {
   height: 40vh;
 }
 
+#features .features-row .btn {
+ font-size: .9rem;
+}
+
 #features .features-row2 .image {
-  width: 100%;
+  width: 120%;
  
 }
 
@@ -166,7 +177,9 @@ form button {
   height: 40vh;
 }
 
-
+#features .features-row2 .btn {
+  font-size: .8rem;
+}
 
 #features .display-2 {
   text-align: center;
