@@ -25,6 +25,15 @@
     margin: 0 auto;
 }
 
+#features .features-row2 {
+    display: block;
+}
+
+#features .features-row2 .image {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .webdev-row {
     display: block;
 }
