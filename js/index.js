@@ -1,3 +1,4 @@
+
 async function getData(){
     const result = await fetch('https://fakestoreapi.com/products/');
     const products = await result.json();
@@ -30,6 +31,8 @@ async function getData(){
     });
  
 }
+
+getData()
 
 async function getData2(){
     const result = await fetch('https://rickandmortyapi.com/api/character');
@@ -64,8 +67,9 @@ async function getData2(){
  
 }
 
-const btn_validar = document.getElementById('btn-validar');
-const validar = (e) => {
+getData2()
+
+const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
     e.preventDefault();
     const nombre = document.getElementById('nombre');
     const email = document.getElementById('email');
@@ -105,7 +109,7 @@ const emailValido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
-// const box = document.querySelector('.box');
+ 
 // function backg(){
 //     for(i = 0; i < 5; i++){
 //         const boxx = document.createRange().createContextualFragment(`
@@ -125,6 +129,7 @@ const emailValido = (email) => {
 
 
 
-getData2()
-getData()
-btn_validar.addEventListener("click", validar);
+const box = document.getElementById('webdev');
+box.style.backgroundImage = "url(img/features-1-web-dev.jpg)"
+
+//btn_validar.addEventListener("click", validar);
